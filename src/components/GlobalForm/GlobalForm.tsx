@@ -8,9 +8,11 @@ import { InputsData } from "./utils/InputsFactory/interfaces";
 const defaultButtonsData: ButtonsBoxProps = {
   reset: {
     children: "Reset",
+    type: "reset",
   },
   submit: {
     children: "Send",
+    type: "submit",
   },
 };
 
