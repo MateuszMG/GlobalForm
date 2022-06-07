@@ -43,6 +43,17 @@ const inputsData: InputsData = [
       },
     ],
   },
+  {
+    inputsWrap: InputsWrap,
+    inputs: [
+      {
+        inputWrap: InputWrap,
+        label: "InputsWrap Email 2",
+        name: "InputsWrap email 2",
+        placeholder: "InputsWrap Email 2",
+      },
+    ],
+  },
 ];
 export const ManyInputsWrappers = () => {
   return (

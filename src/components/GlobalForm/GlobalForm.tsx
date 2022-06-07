@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { FieldValues, Resolver, useForm } from "react-hook-form";
-import { Form } from "./GlobalForm.styled";
+import { StyledComponent } from "styled-components";
+import { DefaultForm } from "./GlobalForm.styled";
 import { ButtonsBox, ButtonsBoxProps } from "./utils/ButtonsBox/ButtonsBox";
 import { InputsFactory } from "./utils/InputsFactory/InputsFactory";
 import { InputsData } from "./utils/InputsFactory/interfaces";
@@ -19,6 +20,7 @@ const defaultButtonsData: ButtonsBoxProps = {
 interface GlobalFormProps {
   buttonsData?: ButtonsBoxProps;
   defaultValues?: any;
+  formComponent?: StyledComponent<"form", any, {}, never>;
   inputsData: InputsData;
   itemToEdit?: any;
   onSubmit: (data: any) => void;
@@ -28,6 +30,7 @@ interface GlobalFormProps {
 export const GlobalForm = ({
   buttonsData,
   defaultValues,
+  formComponent: FormComponent,
   inputsData,
   itemToEdit,
   onSubmit,
@@ -48,6 +51,8 @@ export const GlobalForm = ({
   useEffect(() => {
     if (itemToEdit) reset(itemToEdit);
   }, []);
+
+  const Form = FormComponent || DefaultForm;
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)} onReset={() => reset()}>

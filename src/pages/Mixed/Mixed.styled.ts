@@ -10,6 +10,7 @@ export const FormWrap = styled.div`
   border-radius: 12px;
   box-shadow: 2px 2px 8px 2px #30dafb;
   padding: 36px 24px;
+  width: 900px;
 `;
 
 export const InputWrap = styled.div`

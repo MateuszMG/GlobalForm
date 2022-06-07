@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrap = styled.div`
+export const DefaultWrap = styled.div`
   display: flex;
   flex-wrap: nowrap;
   gap: 8px;

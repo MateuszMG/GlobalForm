@@ -9,7 +9,7 @@ export const defaultInputStyle = css`
   padding: 8px;
   text-indent: 2px;
   transition: box-shadow 0.2s;
-  min-width: 250px;
+  width: 100%;
 
   &::placeholder {
     color: #30dafb;

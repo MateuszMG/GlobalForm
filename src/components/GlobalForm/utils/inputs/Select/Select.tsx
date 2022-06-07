@@ -1,9 +1,9 @@
 import { Control, Controller, FieldValues } from "react-hook-form";
-import ReactSelect from "react-select";
-import { Wrap } from "../../ButtonsBox/ButtonsBox.styled";
+import { customStyles } from "./customStyles";
 import { InputBox } from "../../InputBox/InputBox";
 import { InputProps } from "../../InputsFactory/interfaces";
-import { customStyles } from "./customStyles";
+import { Wrap } from "./Select.styled";
+import ReactSelect from "react-select";
 
 interface SelectProps extends InputProps {
   control?: Control<FieldValues, any>;

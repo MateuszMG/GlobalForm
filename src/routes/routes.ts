@@ -3,15 +3,12 @@ import { Login } from "../pages/Login/Login";
 import { ManyInputsWrappers } from "../pages/ManyInputsWrappers/ManyInputsWrappers";
 import { ManySingleInputs } from "../pages/ManySingleInputs/ManySingleInputs";
 import { Mixed } from "../pages/Mixed/Mixed";
+import { Other } from "../pages/Other/Other";
 import { Validation } from "../pages/Validation/Validation";
 
 export const routes = [
   {
     path: "/",
-    component: Mixed,
-  },
-  {
-    path: "/login",
     component: Login,
   },
   {
@@ -29,6 +26,14 @@ export const routes = [
   {
     path: "/ManySingleInputs",
     component: ManySingleInputs,
+  },
+  {
+    path: "/mixed",
+    component: Mixed,
+  },
+  {
+    path: "/Other",
+    component: Other,
   },
 ];
 

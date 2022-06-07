@@ -31,7 +31,14 @@ export const InputsFactory = ({
 
               return (
                 <InputWrap key={name}>
-                  {type === "textarea" ? (
+                  {(!type || type === "text") && <Input {...data} />}
+                  {type === "textarea" && <Textarea {...data} />}
+                  {type === "checkbox" && <Checkbox {...data} />}
+                  {type === "date" && <Date {...data} />}
+                  {type === "file" && <File {...data} />}
+                  {type === "select" && <Select {...{ ...data, control }} />}
+
+                  {/* {type === "textarea" ? (
                     <Textarea {...data} />
                   ) : type === "checkbox" ? (
                     <Checkbox {...data} />
@@ -39,17 +46,6 @@ export const InputsFactory = ({
                     <Date {...data} />
                   ) : type === "file" ? (
                     <File {...data} />
-                  ) : type === "select" ? (
-                    <Select {...{ ...data, control }} />
-                  ) : (
-                    <Input {...data} />
-                  )}
-                  {/* {type === "textarea" ? (
-                    <Textarea {...data} />
-                  ) : type === "checkbox" ? (
-                    <Checkbox {...data} />
-                  ) : type === "date" ? (
-                    <Date {...data} />
                   ) : type === "select" ? (
                     <Select {...{ ...data, control }} />
                   ) : (
